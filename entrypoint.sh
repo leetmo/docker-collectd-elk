@@ -4,6 +4,10 @@ set -eu
 
 COLLECTD_CONF=/etc/collectd/collectd.conf
 
+if [ -f /collectd.conf ]; then
+  cp /collectd.conf $COLLECTD_CONF
+fi
+
 : ${COLLECTD_HOST:=}
 # if COLLECTD_HOST not already set in the container's environment
 if [ -z "${COLLECTD_HOST}" ]; then
