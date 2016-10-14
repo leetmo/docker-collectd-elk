@@ -4,8 +4,8 @@ set -eu
 
 COLLECTD_CONF=/etc/collectd/collectd.conf
 
-if [ -f /collectd.conf ]; then
-  cp /collectd.conf $COLLECTD_CONF
+if [ -f /config/collectd.conf ]; then
+  cp /config/collectd.conf $COLLECTD_CONF
 fi
 
 : ${COLLECTD_HOST:=}
